@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
     "paths": {
+      "@fe/node_modules/*": ["../fe/node_modules/*"],
+      "@monorepo/dto": ["../../libs/dto/index"],
+      "@monorepo/entities": ["../../libs/entities/index"],
+      "@monorepo/enums": ["../../libs/enums/index"],
       "@monorepo/interfaces": ["../../libs/interfaces/index"]
     },
     "module": "commonjs",

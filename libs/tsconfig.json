@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@api/node_modules/*": ["../apps/api/node_modules/*"],
+      "@fe/node_modules/*": ["../apps/fe/node_modules/*"],
+      "@monorepo/dto": ["./dto/index"],
+      "@monorepo/entities": ["./entities/index"],
+      "@monorepo/enums": ["./enums/index"],
+      "@monorepo/interfaces": ["./interfaces/index"]
+    },
+    "experimentalDecorators": true
+  }
+}
