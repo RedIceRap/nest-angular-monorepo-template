@@ -1,0 +1,25 @@
+<ng-container *ngIf="{ currentUser: authService.currentUser$ | async } as o">
+  <mat-toolbar>
+    <div
+      class="container"
+      fxLayoutAlign.lt-md="space-between center"
+      fxLayoutAlign.gt-sm="end center"
+    >
+      <button
+        fxHide.gt-sm
+        mat-icon-button
+        aria-label="Icon-button with menu icon"
+        (click)="coreService.toggleDrawerState()"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="16px">
+        <app-nav fxHide.lt-md></app-nav>
+
+        <button class="auth button" mat-raised-button (click)="onAuth()">
+          {{ !o.currentUser ? 'Login' : 'Logout' }}
+        </button>
+      </div>
+    </div>
+  </mat-toolbar>
+</ng-container>

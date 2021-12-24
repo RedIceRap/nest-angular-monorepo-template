@@ -1,0 +1,14 @@
+<app-layer>
+  <div class="modal-wrapper" fxLayoutAlign="center center">
+    <button
+      class="close-button"
+      (click)="onClose()"
+      fxLayoutAlign="center center"
+    >
+      x
+    </button>
+    <div class="content">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</app-layer>

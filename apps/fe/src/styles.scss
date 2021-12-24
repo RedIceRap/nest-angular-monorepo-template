@@ -1,1 +1,124 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'variables';
+@import 'overrides';
+
+/* Global HTML */
+html,
+body {
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.5rem;
+  font-weight: 600;
+  color: $dark;
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  max-width: 100%;
+  outline: none;
+  border: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+/* Global Classes */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  width: 100%;
+  padding: 32px 0;
+  border-bottom: 1px solid #ccc;
+
+  &-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+  }
+
+  &-subheading {
+    font-size: 1rem;
+    text-align: center;
+    color: $grey;
+    margin-bottom: 64px;
+    margin-top: -88px;
+  }
+}
+
+.heading-3 {
+  margin-bottom: 24px;
+}
+
+.button {
+  padding: 16px 32px;
+  background-color: $primary;
+  color: $white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: $primary-dark;
+  }
+
+  &:disabled {
+    color: $dark !important;
+    background-color: $grey !important;
+    cursor: not-allowed;
+  }
+}
+
+/* Tablets */
+@media (max-width: 959.98px) {
+  /* Global Classes Tablets */
+  .container {
+    padding: 16px;
+  }
+
+  .section {
+    padding: 16px 0;
+    &-heading {
+      margin-bottom: 40px;
+    }
+
+    &-subheading {
+      margin-top: -32px;
+    }
+  }
+}
+
+@media (max-width: 599.98px) {
+  /* Global Classes Tablets */
+  .container {
+    padding: 16px;
+  }
+
+  .section {
+    padding: 16px 0;
+    &-heading {
+      margin-bottom: 32px;
+    }
+
+    &-subheading {
+      margin-top: -24px;
+    }
+  }
+}

@@ -1,38 +1,27 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "paths": {
-      "@api/nodes_modules/*": ["../api/node_modules/*"],
-      "@monorepo/dto": ["../../libs/dto/index"],
-      "@monorepo/entities": ["../../libs/entities/index"],
-      "@monorepo/enums": ["../../libs/enums/index"],
-      "@monorepo/interfaces": ["../../libs/interfaces/index"],
-      "@app/*": ["./src/app/*"],
-      "@auth/*": ["./src/app/auth/*"],
-      "@core/*": ["./src/app/core/*"],
-      "@shared/*": ["./src/app/shared/*"]
+  "extends": "../../tsconfig.base.json",
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
     },
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
+    {
+      "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./tsconfig.editor.json"
+    }
+  ],
+  "compilerOptions": {
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "es2017",
-    "module": "es2020",
-    "lib": ["es2018", "dom"]
+    "noFallthroughCasesInSwitch": true
   },
   "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true

@@ -1,0 +1,7 @@
+<app-modal [modalName]="eModalName.Signup">
+  <app-form [formConfig]="signupForm" (submited)="onSubmit($event)">
+    <a class="app-a" (click)="onOpenLoginModal()">
+      Have an account? Login instead!
+    </a>
+  </app-form>
+</app-modal>

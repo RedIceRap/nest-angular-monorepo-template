@@ -1,28 +1,13 @@
 {
-  "compilerOptions": {
-    "paths": {
-      "@fe/node_modules/*": ["../fe/node_modules/*"],
-      "@monorepo/dto": ["../../libs/dto/index"],
-      "@monorepo/entities": ["../../libs/entities/index"],
-      "@monorepo/enums": ["../../libs/enums/index"],
-      "@monorepo/interfaces": ["../../libs/interfaces/index"]
+  "extends": "../../tsconfig.base.json",
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
     },
-    "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "es2017",
-    "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
-    "incremental": true,
-    "skipLibCheck": true,
-    "strictNullChecks": false,
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
-  }
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ]
 }

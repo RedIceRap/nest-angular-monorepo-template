@@ -1,0 +1,14 @@
+<nav>
+  <ul fxLayout.lt-md="column" fxLayout.gt-sm="row" fxLayoutGap="16px">
+    <li *ngFor="let item of navItems">
+      <a
+        *ngIf="item.path"
+        mat-button
+        [routerLink]="item.path"
+        (click)="coreService.setDrawerState(false)"
+      >
+        {{ item.displayName }}
+      </a>
+    </li>
+  </ul>
+</nav>

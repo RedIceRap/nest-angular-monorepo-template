@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "app-4ebf9": {
+      "hosting": {
+        "api": [
+          "app-4ebf9"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "app-4ebf9"
+  }
+}

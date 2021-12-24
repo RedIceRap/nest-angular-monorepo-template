@@ -1,0 +1,20 @@
+<ng-container
+  *ngIf="{
+    drawerState: coreService.drawerState$ | async,
+    openedModals: sharedService.openedModals$ | async
+  } as o"
+>
+  <mat-drawer-container [hasBackdrop]="true">
+    <mat-drawer
+      (openedChange)="openedChange($event)"
+      [opened]="o.drawerState"
+      [mode]="'over'"
+    >
+      <app-nav></app-nav>
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-mat-toolbar></app-mat-toolbar>
+
+      <router-outlet></router-outlet>
+    </mat-drawer-content> </mat-drawer-container
+></ng-container>

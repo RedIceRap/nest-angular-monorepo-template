@@ -1,0 +1,45 @@
+<div class="app-form-wrapper">
+  <h3 *ngIf="!disableHeader" class="heading-3">
+    {{ formConfig.metadata.heading }}
+  </h3>
+  <form
+    [formGroup]="formGroup"
+    (ngSubmit)="onSubmit(formGroup.value)"
+    class="app-form"
+    fxLayout="column"
+    [style.marginTop]="disableHeader ? '16px' : '0'"
+  >
+    <div
+      class="fieldsets-wrapper"
+      fxLayout="row wrap"
+      gdGap="16px"
+      fxLayoutAlign="center center"
+    >
+      <fieldset
+        class="app-fieldset"
+        *ngFor="let element of formConfig.elements; let i = index"
+        fxLayout="column"
+        fxLayoutGap="4px"
+        [fxFlex]="'calc(' + element.fxFlex + ' - 16px)'"
+      >
+        <label class="app-label" [for]="element.id">{{
+          element.displayName + (element.required ? ' *' : '')
+        }}</label>
+        <input
+          class="app-input"
+          *ngIf="element.html === 'input'"
+          [id]="element.id"
+          [type]="element.type"
+          [formControlName]="element.formControlName"
+        />
+      </fieldset>
+    </div>
+
+    <button class="app-button" type="submit" mat-raised-button>
+      {{ formConfig.metadata.submitName }}
+    </button>
+  </form>
+  <div class="input-content" fxLayoutAlign="center center">
+    <ng-content></ng-content>
+  </div>
+</div>
