@@ -9,7 +9,7 @@ import { SharedService } from './shared/services/shared/shared.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'app';
+  title = 'frontend';
 
   eModalName = EModalName;
 

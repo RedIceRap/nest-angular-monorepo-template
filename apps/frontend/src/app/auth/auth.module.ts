@@ -14,6 +14,13 @@ import { LoginComponent, SignupComponent } from './components';
     AngularFireAuthModule,
     AngularFirestoreModule,
   ],
-  exports: [LoginComponent, SignupComponent],
+  exports: [
+    LoginComponent,
+    SignupComponent,
+    SharedModule,
+    AngularFireModule,
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+  ],
 })
 export class AuthModule {}

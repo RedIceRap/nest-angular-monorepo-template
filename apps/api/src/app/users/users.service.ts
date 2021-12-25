@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { CreateUserDto, UpdateUserDto } from '@project/dto';
+import { usersMock } from '@project/mocks';
 
 @Injectable()
 export class UsersService {
@@ -8,7 +9,7 @@ export class UsersService {
   }
 
   findAll() {
-    return `This action returns all users`;
+    return usersMock;
   }
 
   findOne(id: number) {

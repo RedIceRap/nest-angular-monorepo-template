@@ -1,4 +1,4 @@
-<div class="app-form-wrapper">
+<div *ngIf="formConfig" class="app-form-wrapper">
   <h3 *ngIf="!disableHeader" class="heading-3">
     {{ formConfig.metadata.heading }}
   </h3>

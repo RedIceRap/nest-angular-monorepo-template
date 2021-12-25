@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@project/mocks": ["libs/mocks/src/index.ts"],
       "@project/dto": ["libs/dto/src/index.ts"],
       "@project/entities": ["libs/entities/src/index.ts"],
       "@project/enums": ["libs/enums/src/index.ts"],

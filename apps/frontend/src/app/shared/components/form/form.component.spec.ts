@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { SharedModule } from '../../shared.module';
 import { FormComponent } from './form.component';
 
 describe('FormComponent', () => {
@@ -8,9 +8,8 @@ describe('FormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormComponent ]
-    })
-    .compileComponents();
+      imports: [SharedModule],
+    }).compileComponents();
   });
 
   beforeEach(() => {

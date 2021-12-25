@@ -26,11 +26,11 @@ import { AngularMaterialModules } from './exports';
   ],
   exports: [
     CommonModule,
-    HttpClientModule,
-    RouterModule,
     FormsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
+    HttpClientModule,
+    RouterModule,
     FormComponent,
     LayerComponent,
     ModalComponent,

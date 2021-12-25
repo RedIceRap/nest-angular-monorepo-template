@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { LayerComponent } from '..';
 import { ModalComponent } from './modal.component';
 
 describe('ModalComponent', () => {
@@ -8,9 +8,8 @@ describe('ModalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ModalComponent ]
-    })
-    .compileComponents();
+      declarations: [ModalComponent, LayerComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

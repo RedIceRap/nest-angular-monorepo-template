@@ -6,7 +6,6 @@ import {
   Validators,
 } from '@angular/forms';
 import { IFormConfig, ILoginRequestData } from '@project/interfaces';
-import { AuthService } from '../../../auth/auth.service';
 
 @Component({
   selector: 'app-form',
@@ -19,8 +18,6 @@ export class FormComponent implements OnInit {
   formGroup!: FormGroup;
   @Output() submited = new EventEmitter<any>();
 
-  constructor(public authService: AuthService) {}
-
   ngOnInit() {
     this.formGroup = this.getConstructedForm(this.formConfig);
   }
@@ -28,7 +25,7 @@ export class FormComponent implements OnInit {
   getConstructedForm(form: IFormConfig): FormGroup {
     const controls: { [key: string]: AbstractControl } = {};
 
-    form.elements.forEach((f) => {
+    form?.elements.forEach((f) => {
       controls[f.formControlName] = new FormControl(
         '',
         f.required ? Validators.required : null

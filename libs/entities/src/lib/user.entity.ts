@@ -1,12 +1,12 @@
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, PrimaryColumn } from 'typeorm';
 
 @Entity({ name: 'user' })
 export class UserEntity extends BaseEntity {
-  @PrimaryGeneratedColumn()
-  pk!: number;
+  @PrimaryColumn()
+  id!: string;
 
-  @Column({ name: 'keycloak_id' })
-  keycloakId!: string;
+  @Column()
+  email!: string;
 
   @Column({ name: 'first_name' })
   firstName!: string;
@@ -23,11 +23,8 @@ export class UserEntity extends BaseEntity {
   @Column({ name: 'phone_number' })
   phoneNumber!: string;
 
-  @Column()
-  companyFk!: string;
-
   @Column('text', { name: 'skill_fks', array: true })
-  skillFks!: string[];
+  skillFks!: number[];
 
   @Column({ name: 'created_at' })
   createdAt!: Date;

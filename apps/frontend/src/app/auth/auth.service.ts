@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { Router } from '@angular/router';
 import { EModalName } from '@project/enums';
 import { IUser } from '@project/interfaces';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
@@ -23,7 +22,6 @@ export class AuthService {
   constructor(
     public afs: AngularFirestore,
     public afAuth: AngularFireAuth,
-    public router: Router,
     private sharedService: SharedService
   ) {
     this.afAuth.authState

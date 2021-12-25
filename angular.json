@@ -67,7 +67,7 @@
       "projectType": "library",
       "root": "libs/dto",
       "sourceRoot": "libs/dto/src",
-      "prefix": "app",
+      "prefix": "project",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
@@ -93,7 +93,7 @@
       "projectType": "library",
       "root": "libs/entities",
       "sourceRoot": "libs/entities/src",
-      "prefix": "app",
+      "prefix": "project",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
@@ -119,7 +119,7 @@
       "projectType": "library",
       "root": "libs/enums",
       "sourceRoot": "libs/enums/src",
-      "prefix": "app",
+      "prefix": "project",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
@@ -145,7 +145,7 @@
       "projectType": "application",
       "root": "apps/frontend",
       "sourceRoot": "apps/frontend/src",
-      "prefix": "app",
+      "prefix": "project",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -276,7 +276,7 @@
       "projectType": "library",
       "root": "libs/interfaces",
       "sourceRoot": "libs/interfaces/src",
-      "prefix": "app",
+      "prefix": "project",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
@@ -293,6 +293,29 @@
               "libs/interfaces/src/**/*.ts",
               "libs/interfaces/src/**/*.html"
             ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "mocks": {
+      "root": "libs/mocks",
+      "sourceRoot": "libs/mocks/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/mocks/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/mocks"],
+          "options": {
+            "jestConfig": "libs/mocks/jest.config.js",
+            "passWithNoTests": true
           }
         }
       },
