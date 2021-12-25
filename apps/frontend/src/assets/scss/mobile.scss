@@ -1,0 +1,17 @@
+@media (max-width: 599.98px) {
+  /* Global Classes Tablets */
+  .container {
+    padding: 16px;
+  }
+
+  .section {
+    padding: 16px 0;
+    &-heading {
+      margin-bottom: 32px;
+    }
+
+    &-subheading {
+      margin-top: -24px;
+    }
+  }
+}

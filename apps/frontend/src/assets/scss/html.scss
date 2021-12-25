@@ -1,0 +1,14 @@
+html,
+body {
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.5rem;
+  font-weight: 600;
+  color: $dark;
+  scroll-behavior: smooth;
+}
+
+a,
+button {
+  cursor: pointer;
+}

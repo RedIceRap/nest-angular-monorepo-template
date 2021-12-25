@@ -1,16 +1,6 @@
-@import 'variables';
+@import 'colors';
+@import 'html';
 @import 'overrides';
-
-/* Global HTML */
-html,
-body {
-  height: 100%;
-  font-size: 16px;
-  line-height: 1.5rem;
-  font-weight: 600;
-  color: $dark;
-  scroll-behavior: smooth;
-}
 
 * {
   font-family: 'Montserrat', sans-serif;
@@ -24,12 +14,6 @@ body {
   border: none;
 }
 
-a,
-button {
-  cursor: pointer;
-}
-
-/* Global Classes */
 .container {
   width: 100%;
   max-width: 1280px;
@@ -86,39 +70,5 @@ button {
   }
 }
 
-/* Tablets */
-@media (max-width: 959.98px) {
-  /* Global Classes Tablets */
-  .container {
-    padding: 16px;
-  }
-
-  .section {
-    padding: 16px 0;
-    &-heading {
-      margin-bottom: 40px;
-    }
-
-    &-subheading {
-      margin-top: -32px;
-    }
-  }
-}
-
-@media (max-width: 599.98px) {
-  /* Global Classes Tablets */
-  .container {
-    padding: 16px;
-  }
-
-  .section {
-    padding: 16px 0;
-    &-heading {
-      margin-bottom: 32px;
-    }
-
-    &-subheading {
-      margin-top: -24px;
-    }
-  }
-}
+@import 'tablet';
+@import 'mobile';
