@@ -1,4 +1,4 @@
-import * as entities from '@app/entities';
+import * as entities from '@project/entities';
 
 export const environment = {
   firebase: {

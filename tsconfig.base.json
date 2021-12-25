@@ -15,11 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@app/dto": ["libs/dto/src/index.ts"],
-      "@app/entities": ["libs/entities/src/index.ts"],
-      "@app/enums": ["libs/enums/src/index.ts"],
-      "@app/interfaces": ["libs/interfaces/src/index.ts"],
-      "@app/types": ["libs/types/src/index.ts"]
+      "@project/dto": ["libs/dto/src/index.ts"],
+      "@project/entities": ["libs/entities/src/index.ts"],
+      "@project/enums": ["libs/enums/src/index.ts"],
+      "@project/interfaces": ["libs/interfaces/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,4 +1,9 @@
-import { EHtmlElement, EInputType, EModalName, ESubmitName } from '@app/enums';
+import {
+  EHtmlElement,
+  EInputType,
+  EModalName,
+  ESubmitName,
+} from '@project/enums';
 
 export interface IFormElement {
   html: EHtmlElement;

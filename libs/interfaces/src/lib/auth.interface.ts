@@ -1,4 +1,4 @@
-import { EModalName } from '@app/enums';
+import { EModalName } from '@project/enums';
 
 export interface ILoginModal {
   displayName: 'Login';
